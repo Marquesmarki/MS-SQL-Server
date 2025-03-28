@@ -74,7 +74,6 @@ SQL Server és recomanat per a entorns on cal:
 - [Docker Hub – SQL Server 2019](https://hub.docker.com/_/microsoft-mssql-server)
 
 ---
-
 ![image](https://github.com/user-attachments/assets/01541560-d411-48b5-905d-504ae6ea479f)
 
 Un cop realitzada la instal·lació realitza una securització de la mateixa. Quins programa realitza aquesta tasca? Realitza una securització de la instal·lació.
@@ -101,11 +100,41 @@ Un cop realitzada la instal·lació realitza una securització de la mateixa. Qu
  Primer accedir al docker amb
  ![image](https://github.com/user-attachments/assets/73351dc6-4c8c-43ef-b149-4923a89f6caf)
 
+el fitxer es troba a:
+![image](https://github.com/user-attachments/assets/168b49a0-ee15-479b-8255-7aefe714987d)
 
+I el seu nom es:
+![image](https://github.com/user-attachments/assets/be6449a4-de80-4c70-8598-2e5c27449f1f)
 
 4.A on es troben físicament els fitxers de dades (per defecte). Com ho has sabut?
 
+![image](https://github.com/user-attachments/assets/907c7e3f-dc7c-471f-91ad-3d0af3c27504)
+
+Com ho has sabut?
+
+Per la documentació oficial de SQL Server per a Linux, Microsoft indica que el directori per defecte és /var/opt/mssql/data per a les seves instàncies.
+
 5.El servei de SGBD escollit en quins ports escolta. Quina modificació/passos caldrien fer per canviar aquest port a un altre per exemple? Important: No realitzis els canvis. Només indica els passos que faries.
 
-6.Incloure en la documentació un petit apartat a on s'expliqui com realitzar la connexió a la BD. Demostra que us podeu connectar al SGBD a través d’una eina de gestió de BD o  a través d’un programa.
+![image](https://github.com/user-attachments/assets/4f33b8ff-09b9-42c8-ab8f-2e0822fbb250)
+Els ports son 0.0.0.0:1433->1433/tcp
 
+Un cop apagat editarem el fitxer mssql.conf
+
+
+Primer parem el servei:
+![image](https://github.com/user-attachments/assets/3e3df30f-a10a-4c95-8ff5-a026616f4d03)
+
+I coloquem el nou port per el que escoltara
+![image](https://github.com/user-attachments/assets/2ca9de83-ac4f-4353-b916-0a472d531efd)
+
+Mapar el nou port a Docker en reiniciar el contenidor
+
+docker run -e "ACCEPT_EULA=Y" \
+           -e "MSSQL_SA_PASSWORD=ContrasenyaSegura123" \
+           -p 1444:1444 \
+           --name sqlserver2019 \
+           -d rapidfort/microsoft-sql-server-2019-ib:latest
+
+
+6.Incloure en la documentació un petit apartat a on s'expliqui com realitzar la connexió a la BD. Demostra que us podeu connectar al SGBD a través d’una eina de gestió de BD o  a través d’un programa.
