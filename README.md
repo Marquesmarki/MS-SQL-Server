@@ -1,4 +1,5 @@
 # MS-SQL-Server
+
 # Descripció de la base de dades escollida: **SQL Server**
 
 ## 1. Història i suport
@@ -16,7 +17,7 @@ Funcionalitats destacades:
 - Integració amb **.NET**, **Azure** i **Power BI**
 - Capacitats de **machine learning** i anàlisi avançada
 
-🔧 El **suport oficial** és proporcionat per **Microsoft**, tant per la versió local com les del núvol (*Azure SQL*).
+El **suport oficial** és proporcionat per **Microsoft**, tant per la versió local com les del núvol (*Azure SQL*).
 
 ---
 
@@ -73,6 +74,7 @@ SQL Server és recomanat per a entorns on cal:
 - [Docker Hub – SQL Server 2019](https://hub.docker.com/_/microsoft-mssql-server)
 
 ---
+
 ![image](https://github.com/user-attachments/assets/01541560-d411-48b5-905d-504ae6ea479f)
 
 Un cop realitzada la instal·lació realitza una securització de la mateixa. Quins programa realitza aquesta tasca? Realitza una securització de la instal·lació.
