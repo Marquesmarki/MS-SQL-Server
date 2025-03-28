@@ -1,4 +1,78 @@
 # MS-SQL-Server
+# Descripció de la base de dades escollida: **SQL Server**
+
+## 1. Història i suport
+
+**Microsoft SQL Server** és un sistema de gestió de bases de dades relacionals (SGBD-R) desenvolupat per **Microsoft**.\
+Va començar a finals dels anys 80 i la primera versió (1.0) es va llançar el **1989**, en col·laboració amb **Sybase**.\
+Des de llavors, Microsoft ha continuat el desenvolupament de forma independent.
+
+Versions destacades: **2000, 2005, 2008, 2012, 2016, 2019, 2022...**
+
+Funcionalitats destacades:
+
+- Suport a **Big Data Clusters**
+- Motor de **columnstore index**
+- Integració amb **.NET**, **Azure** i **Power BI**
+- Capacitats de **machine learning** i anàlisi avançada
+
+🔧 El **suport oficial** és proporcionat per **Microsoft**, tant per la versió local com les del núvol (*Azure SQL*).
+
+---
+
+## 2. Casos d’ús recomanats
+
+SQL Server és recomanat per a entorns on cal:
+
+- Gestió de grans volums de dades relacionals
+- Alta integritat i seguretat
+- Integració amb l’ecosistema Microsoft
+
+**Exemples:**
+
+- Empreses bancàries i financeres
+- Sistemes ERP i CRM
+- Aplicacions web/intranets amb Windows Server
+- Solucions de Business Intelligence amb SSRS i SSAS
+
+---
+
+## 3. Versions disponibles
+
+| **Edició**               | **Descripció**                                                     |
+| ------------------------ | ------------------------------------------------------------------ |
+| `Express`                | Gratuïta i lleugera, ideal per estudi o apps petites               |
+| `Developer`              | Gratuïta amb totes les funcionalitats, només per a desenvolupament |
+| `Standard`               | Per a empreses petites/mitjanes, funcionalitats limitades          |
+| `Enterprise`             | Completa, amb alta disponibilitat, BI i seguretat avançada         |
+| `Azure SQL Database`     | Núvol (PaaS), escalable, gestió automàtica                         |
+| `SQL Server on Azure VM` | Instal·lació clàssica sobre màquines virtuals Azure (IaaS)         |
+
+---
+
+## 4. Comparativa amb altres SGBD relacionals
+
+| Característica     | SQL Server            | MySQL               | PostgreSQL           | Oracle DB          |
+| ------------------ | --------------------- | ------------------- | -------------------- | ------------------ |
+| Desenvolupador     | Microsoft             | Oracle              | Comunitat            | Oracle             |
+| Llicència          | Propietària           | Codi obert (GPL)    | Codi obert           | Propietària        |
+| Sistemes operatius | Windows/Linux         | Multiplataforma     | Multiplataforma      | Multiplataforma    |
+| Escalabilitat      | Molt bona             | Bona                | Excel·lent           | Excel·lent         |
+| Suport oficial     | Sí, Microsoft         | Sí, per Oracle      | Opcional (comercial) | Sí, Oracle         |
+| Facilitat d’ús     | Excel·lent en Windows | Fàcil per a novells | Potent però complex  | Potent però costós |
+
+---
+
+## Webgrafia
+
+- [Microsoft SQL Server – Pàgina oficial](https://learn.microsoft.com/sql/sql-server)
+- [Comparació d’edicions de SQL Server](https://learn.microsoft.com/sql/sql-server/editions-and-components-of-sql-server)
+- [Microsoft Azure – SQL Database](https://azure.microsoft.com/products/azure-sql/)
+- [Wikipedia – Microsoft SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server)
+- [Comparativa SGBD – DB Engines](https://db-engines.com/en/system/Microsoft+SQL+Server%3BMySQL%3BOracle%3BPostgreSQL)
+- [Docker Hub – SQL Server 2019](https://hub.docker.com/_/microsoft-mssql-server)
+
+---
 ![image](https://github.com/user-attachments/assets/01541560-d411-48b5-905d-504ae6ea479f)
 
 Un cop realitzada la instal·lació realitza una securització de la mateixa. Quins programa realitza aquesta tasca? Realitza una securització de la instal·lació.
