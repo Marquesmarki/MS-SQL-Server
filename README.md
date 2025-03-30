@@ -121,7 +121,6 @@ Els ports son 0.0.0.0:1433->1433/tcp
 
 Un cop apagat editarem el fitxer mssql.conf
 
-
 Primer parem el servei:
 ![image](https://github.com/user-attachments/assets/3e3df30f-a10a-4c95-8ff5-a026616f4d03)
 
