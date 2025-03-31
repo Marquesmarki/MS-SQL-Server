@@ -137,3 +137,18 @@ docker run -e "ACCEPT_EULA=Y" \
 
 
 6.Incloure en la documentació un petit apartat a on s'expliqui com realitzar la connexió a la BD. Demostra que us podeu connectar al SGBD a través d’una eina de gestió de BD o  a través d’un programa.
+
+Per podernos connectar a la nostre base de dades farem servir azure data studio " https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio " (hazme un elnaze resumido)
+
+Coloquem la nostre informaccio:
+![image](https://github.com/user-attachments/assets/fa73cb81-449e-4011-a798-0bfe7966c31c)
+
+Un cop autentificat ja tenim acces a la nostre maquina virtual!
+![image](https://github.com/user-attachments/assets/c7514dae-c410-4e16-959c-60d9f24dde2f)
+
+Ja podem fer consultes
+![image](https://github.com/user-attachments/assets/74cc7db1-b5ce-4e0c-8edf-d1565b226e38)
+
+
+
+
