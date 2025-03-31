@@ -152,3 +152,159 @@ Ja podem fer consultes
 
 
 
+
+
+
+
+
+
+
+------
+
+
+
+
+
+
+
+
+
+# MS-SQL-Server
+
+## Documentació tècnica de la instal·lació i configuració de SQL Server 2019 amb Docker
+
+> Aquesta documentació està orientada a tècnics informàtics i no a usuaris no experts.
+
+---
+
+## 1. Securització de la instal·lació
+
+Un cop realitzada la instal·lació de SQL Server 2019 en Docker, cal aplicar una securització manual.
+
+Quin programa realitza aquesta tasca?  
+En el cas de SQL Server no hi ha una eina automàtica com en altres SGBDs. La securització s'ha de fer manualment mitjançant bones pràctiques.
+
+**Accions realitzades:**
+- Definir una contrasenya forta
+- Verificar configuració de ports
+- Control d’accés al contenidor
+
+Aquí va (securitzacio-1.jpg)  
+Aquí va (securitzacio-2.jpg)  
+Aquí va (securitzacio-3.jpg)
+
+---
+
+## 2. Instruccions per gestionar el servei
+
+**Arrencar el servei:**
+```bash
+docker start sqlserver
+```
+Aquí va (arrencar-servei.jpg)
+
+Verificar l'estat del servei:
+
+```bash
+docker ps -a
+```
+Aquí va (status-servei.jpg)
+
+Aturar el servei:
+
+```bash
+docker stop sqlserver
+```
+Aquí va (aturar-servei.jpg)
+
+3. Fitxer de configuració del SGBD escollit
+Per accedir al fitxer de configuració:
+
+Accedir al contenidor:
+
+```bash
+docker exec -it sqlserver bash
+```
+Aquí va (accedir-docker.jpg)
+
+Ruta del fitxer:
+
+```bash
+/var/opt/mssql/mssql.conf
+```
+Aquí va (ruta-config.jpg)
+
+Nom del fitxer:
+
+```bash
+mssql.conf
+```
+Aquí va (nom-fitxer.jpg)
+
+4. Ubicació dels fitxers de dades
+Els fitxers de dades de SQL Server es troben a:
+
+```bash
+/var/opt/mssql/data/
+```
+Aquesta informació s’ha obtingut mitjançant la documentació oficial de Microsoft per SQL Server a Linux.
+
+Aquí va (ubicacio-dades.jpg)
+
+5. Ports i modificació
+Ports per defecte:
+
+```bash
+0.0.0.0:1433->1433/tcp
+```
+Aquí va (port-docker.jpg)
+
+Passos per modificar el port:
+
+Aturar el servei:
+
+```bash
+docker stop sqlserver
+```
+Aquí va (stop-servei.jpg)
+
+Editar el fitxer mssql.conf i afegir:
+```bash
+[network]
+tcpport=1444
+```
+Aquí va (editar-conf-port.jpg)
+
+Reiniciar el contenidor amb el nou port:
+
+```bash
+docker run -e "ACCEPT_EULA=Y" \
+           -e "MSSQL_SA_PASSWORD=ContrasenyaSegura123" \
+           -p 1444:1444 \
+           --name sqlserver2019 \
+           -d rapidfort/microsoft-sql-server-2019-ib:latest
+```
+6. Connexió a la base de dades
+Per connectar-nos a SQL Server utilitzem Azure Data Studio
+(Descarregar: learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio)
+
+Informació de connexió:
+
+Server: localhost, 127.0.0.1 o IP de la màquina
+
+Port: 1433 o el personalitzat
+
+Authentication: SQL Login
+
+Login: sa
+
+Password: la definida a la instal·lació
+
+Aquí va (connexio-config.jpg)
+Aquí va (connexio-ok.jpg)
+Aquí va (consulta-sql.jpg)
+
+
+
+
+
