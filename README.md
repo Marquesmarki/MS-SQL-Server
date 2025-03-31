@@ -189,9 +189,9 @@ En el cas de SQL Server no hi ha una eina automàtica com en altres SGBDs. La se
 - Verificar configuració de ports
 - Control d’accés al contenidor
 
-Aquí va (securitzacio-1.jpg)  
-Aquí va (securitzacio-2.jpg)  
-Aquí va (securitzacio-3.jpg)
+![image](https://github.com/user-attachments/assets/01541560-d411-48b5-905d-504ae6ea479f)
+![image](https://github.com/user-attachments/assets/fd0baa83-d768-4ebe-a4d6-5d0e83b2b306)
+![image](https://github.com/user-attachments/assets/e23a7cc4-ad48-41bf-a462-b79ef782cd1f)
 
 ---
 
@@ -201,21 +201,21 @@ Aquí va (securitzacio-3.jpg)
 ```bash
 docker start sqlserver
 ```
-Aquí va (arrencar-servei.jpg)
+ ![image](https://github.com/user-attachments/assets/cba69150-b048-477c-919c-95dc94b6a32b)
 
 Verificar l'estat del servei:
 
 ```bash
 docker ps -a
 ```
-Aquí va (status-servei.jpg)
+ ![image](https://github.com/user-attachments/assets/d5ed131a-e943-4aed-a374-56a81a46d635)
 
 Aturar el servei:
 
 ```bash
 docker stop sqlserver
 ```
-Aquí va (aturar-servei.jpg)
+ ![image](https://github.com/user-attachments/assets/f6537864-5f90-4e7e-ad82-41ab25efd548)
 
 3. Fitxer de configuració del SGBD escollit
 Per accedir al fitxer de configuració:
@@ -225,21 +225,21 @@ Accedir al contenidor:
 ```bash
 docker exec -it sqlserver bash
 ```
-Aquí va (accedir-docker.jpg)
+ ![image](https://github.com/user-attachments/assets/73351dc6-4c8c-43ef-b149-4923a89f6caf)
 
 Ruta del fitxer:
 
 ```bash
 /var/opt/mssql/mssql.conf
 ```
-Aquí va (ruta-config.jpg)
+![image](https://github.com/user-attachments/assets/168b49a0-ee15-479b-8255-7aefe714987d)
 
 Nom del fitxer:
 
 ```bash
 mssql.conf
 ```
-Aquí va (nom-fitxer.jpg)
+![image](https://github.com/user-attachments/assets/be6449a4-de80-4c70-8598-2e5c27449f1f)
 
 4. Ubicació dels fitxers de dades
 Els fitxers de dades de SQL Server es troben a:
@@ -249,7 +249,7 @@ Els fitxers de dades de SQL Server es troben a:
 ```
 Aquesta informació s’ha obtingut mitjançant la documentació oficial de Microsoft per SQL Server a Linux.
 
-Aquí va (ubicacio-dades.jpg)
+![image](https://github.com/user-attachments/assets/907c7e3f-dc7c-471f-91ad-3d0af3c27504)
 
 5. Ports i modificació
 Ports per defecte:
@@ -257,7 +257,7 @@ Ports per defecte:
 ```bash
 0.0.0.0:1433->1433/tcp
 ```
-Aquí va (port-docker.jpg)
+![image](https://github.com/user-attachments/assets/4f33b8ff-09b9-42c8-ab8f-2e0822fbb250)
 
 Passos per modificar el port:
 
@@ -266,14 +266,14 @@ Aturar el servei:
 ```bash
 docker stop sqlserver
 ```
-Aquí va (stop-servei.jpg)
+![image](https://github.com/user-attachments/assets/3e3df30f-a10a-4c95-8ff5-a026616f4d03)
 
 Editar el fitxer mssql.conf i afegir:
 ```bash
 [network]
 tcpport=1444
 ```
-Aquí va (editar-conf-port.jpg)
+![image](https://github.com/user-attachments/assets/2ca9de83-ac4f-4353-b916-0a472d531efd)
 
 Reiniciar el contenidor amb el nou port:
 
@@ -300,9 +300,9 @@ Login: sa
 
 Password: la definida a la instal·lació
 
-Aquí va (connexio-config.jpg)
-Aquí va (connexio-ok.jpg)
-Aquí va (consulta-sql.jpg)
+![image](https://github.com/user-attachments/assets/fa73cb81-449e-4011-a798-0bfe7966c31c)
+![image](https://github.com/user-attachments/assets/c7514dae-c410-4e16-959c-60d9f24dde2f)
+![image](https://github.com/user-attachments/assets/74cc7db1-b5ce-4e0c-8edf-d1565b226e38)
 
 
 
