@@ -207,7 +207,9 @@ Login: sa
 Password: la definida a la instal·lació
 
 Coloquem la nostre informaccio:
+
 ![image](https://github.com/user-attachments/assets/fa73cb81-449e-4011-a798-0bfe7966c31c)
+
 
 Un cop autentificat ja tenim acces a la nostre maquina virtual!
 ![image](https://github.com/user-attachments/assets/c7514dae-c410-4e16-959c-60d9f24dde2f)
