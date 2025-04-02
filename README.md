@@ -123,7 +123,7 @@ docker stop sqlserver
 ```
  ![image](https://github.com/user-attachments/assets/f6537864-5f90-4e7e-ad82-41ab25efd548)
 
-3. Fitxer de configuració del SGBD escollit
+## 3. Fitxer de configuració del SGBD escollit
 Per accedir al fitxer de configuració:
 
 Accedir al contenidor:
@@ -147,7 +147,7 @@ mssql.conf
 ```
 ![image](https://github.com/user-attachments/assets/be6449a4-de80-4c70-8598-2e5c27449f1f)
 
-4. Ubicació dels fitxers de dades
+## 4. Ubicació dels fitxers de dades
 Els fitxers de dades de SQL Server es troben a:
 
 ```bash
@@ -157,7 +157,7 @@ Aquesta informació s’ha obtingut mitjançant la documentació oficial de Micr
 
 ![image](https://github.com/user-attachments/assets/907c7e3f-dc7c-471f-91ad-3d0af3c27504)
 
-5. Ports i modificació
+## 5. Ports i modificació
 Ports per defecte:
 
 ```bash
@@ -190,7 +190,7 @@ docker run -e "ACCEPT_EULA=Y" \
            --name sqlserver2019 \
            -d rapidfort/microsoft-sql-server-2019-ib:latest
 ```
-6. Connexió a la base de dades
+## 6. Connexió a la base de dades
 Per connectar-nos a SQL Server utilitzem Azure Data Studio
 (Descarregar: learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio)
 
